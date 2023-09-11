@@ -1,4 +1,4 @@
-package com.workintech.Movie.Rest.Api;
+package com.workintech;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
