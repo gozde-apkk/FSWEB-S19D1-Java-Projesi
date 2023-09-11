@@ -3,10 +3,12 @@ package com.workintech.service;
 import com.workintech.dao.ActorRepository;
 import com.workintech.entity.Actor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ActorServiceImpl implements  ActorService{
 
     private ActorRepository actorRepository;

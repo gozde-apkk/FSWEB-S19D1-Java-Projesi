@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.repository.cdi.Eager;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -30,6 +31,13 @@ public class Actor {
 
     @ManyToMany(cascade = {CascadeType.DETACH , CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH , CascadeType.REMOVE})
     @JoinTable(name = "movie_actor", schema = "spring",
-    joinColumns = @JoinColumn(name = "movie_id"), inverseJoinColumns = @JoinColumn(name = "movie_id"))
-    private List<Movie> movieList;
+    joinColumns = @JoinColumn(name = "actor_id"), inverseJoinColumns = @JoinColumn(name = "movie_id"))
+    private List<Movie> movies;
+
+    public void addMovie(Movie movie){
+        if(movies==null){
+            movies=new ArrayList<>();
+        }movies.add(movie);
+    }
+
 }

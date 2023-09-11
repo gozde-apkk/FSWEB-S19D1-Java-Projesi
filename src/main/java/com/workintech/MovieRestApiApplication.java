@@ -1,4 +1,4 @@
-package com.workintech.Movie.Rest.Api;
+package com.workintech;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
