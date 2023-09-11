@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "77ae9983-0375-452e-acdc-9b45e224d5a1",
+		"name": "MovieActor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27707589"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9000/movie/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\" : {\r\n    \"name\" : \"A Clockwork Orange\",\r\n    \"directorName\": \"Stanley Kubrick\",\r\n    \"rating\" : 7,\r\n    \"releaseDate\":\"1971-07-11\" \r\n    },\r\n    \"actor\" : {\r\n        \"firstName\": \" Malcolm\",\r\n        \"lastName\" : \"  McDowell\",\r\n        \"gender\" : \"MALE\",\r\n        \"birthDate\" : \"1930-10-21\"\r\n\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/movie/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/movie/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/movie/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9000/movie/1",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": ":9000/actor/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/movie/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"movie",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": ":9000/actor/4",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/actor/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\" : {\r\n    \"name\" : \"Inception\",\r\n    \"directorName\": \" Christopher Nolan\",\r\n    \"rating\" :8 ,\r\n    \"releaseDate\":\"2010-07-11\" \r\n    },\r\n    \"actor\" : {\r\n        \"firstName\": \" Leonardo \",\r\n        \"lastName\" : \"  DiCaprio\",\r\n        \"gender\" : \"MALE\",\r\n        \"birthDate\" : \"1960-10-21\"\r\n\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/actor/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"actor",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/actor/4",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"firstName\": \" Leonardo \",\r\n        \"lastName\" : \"  DiCaprio\",\r\n        \"gender\" : \"MALE\",\r\n        \"birthDate\" : \"1960-09-11\"\r\n\r\n    }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/actor/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"actor",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": ":9000/actor/3",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/actor/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"actor",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 20:14:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"actorId\": 3,\n    \"actorFirstName\": \" Malcolm\",\n    \"actorLastName\": \"  McDowell\",\n    \"actorBirthDate\": \"1930-10-21\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:9000/actor/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/actor/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"actor",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:9000/actor/3",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/actor/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"actor",
+								"3"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 20:14:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"message\": \"Entity must not be null\",\n    \"timestamp\": 1694463289485\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:9000/actor/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/actor/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"actor",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
